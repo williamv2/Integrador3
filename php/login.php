@@ -11,13 +11,14 @@
     <link href="../bootstrap/css/styles.css" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="../bootstrap/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
     <!-- Scripts -->
+    <script src="../js/validaciones.js"></script>
     <!--<script language="javascript">
     var im = false;
     function cambiaImagen() {
       tab = document.getElementById('body');
       tab.style.background = (im = !im) ? 'url(./img/Granja1.png)' : 'url(./img/Granja2.png)'; 
     }
-     
+     onload="setInterval('cambiaImagen()',8000)"
     </script>-->
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -26,14 +27,14 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body class="login-bg" onload="setInterval('cambiaImagen()',8000)" id="body" style="background:url(../img/fondo1.jpeg)">
+  <body class="login-bg" id="body" style="background:url(../img/fondo1.jpeg)">
     <?php
       session_start();
 
       if(isset($_SESSION['user'])){
 
         
-        header("location:./php/dashboard.php");
+        header("location:./dashboard.php");
             
 
         }
@@ -65,14 +66,14 @@
         <div class="login-wrapper">
               <div class="box">
                   <div class="content-wrap">
-                    <form action="./php/login.php" method="POST">
+                    <form action="./ingresar.php" method="POST" onsubmit="return validarlogin();">
                       <h6>Ingresar</h6>
                       <i class="fa fa-user-circle-o fa-5x" aria-hidden="true"></i>
                       <hr>
                       <input class="form-control" type="text" name="username" id="username" placeholder="Usuario:">
                       <input class="form-control" type="password" name="pwd" id="pwd" placeholder="Contraseña:">
                       <div>
-                        <a href="./php/formRecuperar.php"><span class="glyphicon glyphicon-question-sign"></span> ¿Olvido su contraseña?</a>
+                        <a href=""><span class="glyphicon glyphicon-question-sign"></span> ¿Olvido su contraseña?</a>
                       </div>
                       <div class="action">
                           <button class="btn btn-primary signup" type="submit"><span class="glyphicon glyphicon-log-in"></span> Iniciar Sesion</button>
