@@ -42,7 +42,7 @@
 
         $user = strtoupper($_SESSION['user']);
         $hoy = getdate();
-
+        $id = $_SESSION['id'];
 
             echo "";
 
@@ -855,7 +855,7 @@
               <div class="card-header">
                 <i class="fas fa-table"></i>
                 Noticias
-                <button type="button" class="btn btn-default btn-md float-right" data-toggle="modal" data-target="#myModalAgree"><span class="fa fa-plus"></span> Agregar</button>
+                <button type="button" class="btn btn-default btn-md float-right" data-toggle="modal" data-target="#AgreenotiModal"><span class="fa fa-plus"></span> Agregar</button>
               </div>
 
               <div class="card-body">
@@ -2135,10 +2135,58 @@
           <div class="modal-body">Seleccione "Cerrar sesión" a continuación si está listo para finalizar su sesión actual.</div>
           <div class="modal-footer">
             <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-            <a class="btn btn-primary" href="cerrarsesion.php">Cerrar Sesión</a>
+            <a class="btn btn-danger" href="cerrarsesion.php">Cerrar Sesión</a>
           </div>
         </div>
       </div>
+    </div>
+
+    <!-- AgreeNoti Modal-->
+    <div class="modal fade" id="AgreenotiModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <form>
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Agregar Noticia</h5>
+              <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+              </button>
+            </div>
+
+            <div class="modal-body">
+            <input type="text" name="nom_noti" id="nom_noti"
+            class="form-control" placeholder="Título" required="true" autofocus="autofocus">
+            <br>
+            <textarea class="form-control" placeholder="Descripción" rows="4" name="desc_noti" id="desc_noti" required="true" autofocus="autofocus"></textarea>
+            <br>
+            Fecha: <input type="date" name="fech_noti" id="fech_noti" class="form-control" required="true" autofocus="autofocus">
+            <br>
+            <input type="text" name="lugar_noti" id="lugar_noti" class="form-control" placeholder="Lugar" required="true" autofocus="autofocus">
+            <br>
+            <div class="container" ng-controller="uploadController" ng-init="show_images()">
+            <br>
+            Seleccione la imagen: <input type="file" file-input="files" multiple /><br><br>
+            
+            <button class="btn btn-info" ng-click="uploadImage()">Subir</button>
+            
+            <div style="clear:both"></div>
+            <hr>
+            <span class="col-md-3" ng-repeat="image in uploaded_images">
+            <input type="radio" name="img_noti" id="img_noti" value="../vista/img/upload/{{image.file_name}}">
+            <img ng-src="../vista/img/upload/{{image.file_name}}" width="100" height="80" class="show_images" /></span>
+            
+            <?php echo "<script> console.log(".$id.");</script>" ?>
+            
+            </div>
+            </div>
+            
+            <div class="modal-footer">
+              <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+              <button class="btn btn-success" type="submit">Registrar</button>
+            </div>
+          </div>
+        </div>
+      </form>
     </div>
 
     <!-- Bootstrap core JavaScript-->

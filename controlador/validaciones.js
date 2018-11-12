@@ -28,18 +28,18 @@ function validarlogin() {
 $(document).ready(function(){
             $('#dashboard').click(function() {
                 
-                 $('#content-wrapper2').fadeOut(300) && $('#content-wrapper3').fadeOut(500) && $('#content-wrapper4').fadeOut(300) && $('#content-wrapper1').fadeIn(300);
+                 $('#content-wrapper2').fadeOut(200) && $('#content-wrapper3').fadeOut(500) && $('#content-wrapper4').fadeOut(200) && $('#content-wrapper1').fadeIn(500);
             })
             $('#noticias').click(function() {
                 
-                 $('#content-wrapper1').fadeOut(300) && $('#content-wrapper3').fadeOut(300) && $('#content-wrapper4').fadeOut(300) && $('#content-wrapper2').fadeIn(300);
+                 $('#content-wrapper1').fadeOut(200) && $('#content-wrapper3').fadeOut(200) && $('#content-wrapper4').fadeOut(200) && $('#content-wrapper2').fadeIn(500);
             })
             $('#eventos').click(function() {
                 
-                 $('#content-wrapper1').fadeOut(300) && $('#content-wrapper2').fadeOut(300)&& $('#content-wrapper4').fadeOut(300) && $('#content-wrapper3').fadeIn(300);
+                 $('#content-wrapper1').fadeOut(200) && $('#content-wrapper2').fadeOut(200)&& $('#content-wrapper4').fadeOut(200) && $('#content-wrapper3').fadeIn(500);
             })
             $('#convocatorias').click(function() {
                 
-                 $('#content-wrapper1').fadeOut(300) && $('#content-wrapper2').fadeOut(300) && $('#content-wrapper3').fadeOut(300) && $('#content-wrapper4').fadeIn(300) ;
+                 $('#content-wrapper1').fadeOut(200) && $('#content-wrapper2').fadeOut(200) && $('#content-wrapper3').fadeOut(200) && $('#content-wrapper4').fadeIn(500) ;
             })
       })

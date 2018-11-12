@@ -64,6 +64,7 @@ class conexion{
 		if($row = mysqli_fetch_array($consulta)){
 
 			session_start();
+			$_SESSION['id'] = $row['idcodigoadm'];
 			$_SESSION['user']= $row['usuario'];
 			$_SESSION['pass']= $row['password'];
 
