@@ -120,7 +120,7 @@
     <div id="wrapper">
 
       <!-- Sidebar -->
-      <ul class="sidebar navbar-nav">
+      <ul class="sidebar navbar-nav toggled">
         <li class="nav-item active">
           <a class="nav-link" href="#" id="dashboard">
             <i class="fas fa-fw fa-tachometer-alt"></i>
@@ -174,13 +174,13 @@
 
             <!-- Icon Cards-->
             <div class="row">
-              <div class="col-xl-3 col-sm-6 mb-3">
+              <div class="col-xl-3 col-sm-6 mb-3" ng-controller="countnoticia">
                 <div class="card text-white bg-primary o-hidden h-100">
                   <div class="card-body">
                     <div class="card-body-icon">
                       <i class="fa fa-newspaper-o"></i>
                     </div>
-                    <div class="mr-5">26 Nuevas Noticias!</div>
+                    <div class="mr-5" ng-repeat="da in dashnoti">{{da.nnot}} Nuevas Noticias!</div>
                   </div>
                   <a class="card-footer text-white clearfix small z-1" href="#" id="noticiasdash">
                     <span class="float-left">Ver Detalles</span>
@@ -190,13 +190,13 @@
                   </a>
                 </div>
               </div>
-              <div class="col-xl-3 col-sm-6 mb-3">
+              <div class="col-xl-3 col-sm-6 mb-3" ng-controller="countevento">
                 <div class="card text-white bg-warning o-hidden h-100">
                   <div class="card-body">
                     <div class="card-body-icon">
                       <i class="fa fa-calendar"></i>
                     </div>
-                    <div class="mr-5">11 Nuevos Eventos!</div>
+                    <div class="mr-5" ng-repeat="da in dashevent">{{da.nevent}} Nuevos Eventos!</div>
                   </div>
                   <a class="card-footer text-white clearfix small z-1" href="#" id="eventosdash">
                     <span class="float-left">Ver Detalles</span>
@@ -206,13 +206,13 @@
                   </a>
                 </div>
               </div>
-              <div class="col-xl-3 col-sm-6 mb-3">
+              <div class="col-xl-3 col-sm-6 mb-3" ng-controller="countconvo">
                 <div class="card text-white bg-success o-hidden h-100">
                   <div class="card-body">
                     <div class="card-body-icon">
                       <i class="fa fa-bullhorn"></i>
                     </div>
-                    <div class="mr-5">10 Nuevas Convocatorias!</div>
+                    <div class="mr-5" ng-repeat="da in dashconvo">{{da.nconvo}} Nuevas Convocatorias!</div>
                   </div>
                   <a class="card-footer text-white clearfix small z-1" href="#" id="convocatoriasdash">
                     <span class="float-left">Ver Detalles</span>
@@ -222,13 +222,13 @@
                   </a>
                 </div>
               </div>
-              <div class="col-xl-3 col-sm-6 mb-3">
+              <div class="col-xl-3 col-sm-6 mb-3" ng-controller="countdep">
                 <div class="card text-white bg-danger o-hidden h-100">
                   <div class="card-body">
                     <div class="card-body-icon">
                       <i class="fa fa-trophy"></i>
                     </div>
-                    <div class="mr-5">11 Deportes!</div>
+                    <div class="mr-5" ng-repeat="da in dashdep">{{da.ndep}} Deportes!</div>
                   </div>
                   <a class="card-footer text-white clearfix small z-1" href="#">
                     <span class="float-left">Ver Detalles</span>
@@ -248,7 +248,7 @@
               <div class="card-body">
                 <canvas id="myAreaChart" width="100%" height="30"></canvas>
               </div>
-              <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+              <div class="card-footer small text-muted">Updated <?php echo $hoy['weekday']; ?></div>
             </div>
 
             <!-- DataTables Example 
@@ -740,7 +740,7 @@
                   </table>
                 </div>
               </div>
-              <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+              <div class="card-footer small text-muted">Updated <?php echo $hoy['weekday']; ?></div>
             </div>-->
 
           </div>
@@ -847,7 +847,7 @@
               <div class="card-body">
                 <canvas id="myAreaChart" width="100%" height="30"></canvas>
               </div>
-              <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+              <div class="card-footer small text-muted">Updated <?php echo $hoy['weekday']; ?></div>
             </div>-->
 
             <!-- DataTables Example -->
@@ -1078,7 +1078,7 @@
               <div class="card-body">
                 <canvas id="myAreaChart" width="100%" height="30"></canvas>
               </div>
-              <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+              <div class="card-footer small text-muted">Updated <?php echo $hoy['weekday']; ?></div>
             </div>
 
             <!-- DataTables Example 
@@ -1570,7 +1570,7 @@
                   </table>
                 </div>
               </div>
-              <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+              <div class="card-footer small text-muted">Updated <?php echo $hoy['weekday']; ?></div>
             </div>-->
 
           </div>
@@ -1677,7 +1677,7 @@
               <div class="card-body">
                 <canvas id="myAreaChart" width="100%" height="30"></canvas>
               </div>
-              <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+              <div class="card-footer small text-muted">Updated <?php echo $hoy['weekday']; ?></div>
             </div>
 
             <!-- DataTables Example 
@@ -2169,7 +2169,7 @@
                   </table>
                 </div>
               </div>
-              <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+              <div class="card-footer small text-muted">Updated <?php echo $hoy['weekday']; ?></div>
             </div>-->
 
           </div>

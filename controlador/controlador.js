@@ -84,3 +84,67 @@ var datos = angular.module('dashunidaddeportiva',[]);
 				});
 			}
 			});
+
+	datos.controller('countnoticia',function($scope,$http){
+
+		$scope.importardash = function(){
+
+			$http.get('../modelo/datos/listarcountnot.php').then(function(datos){
+
+				$scope.dashnoti = datos.data;
+
+				console.log(datos.data);
+			})
+
+		}
+
+		$scope.importardash();
+	});
+
+	datos.controller('countevento',function($scope,$http){
+
+		$scope.importardash = function(){
+
+			$http.get('../modelo/datos/listarcountevent.php').then(function(datos){
+
+				$scope.dashevent = datos.data;
+
+				console.log(datos.data);
+			})
+
+		}
+
+		$scope.importardash();
+	});
+
+	datos.controller('countconvo',function($scope,$http){
+
+		$scope.importardash = function(){
+
+			$http.get('../modelo/datos/listarcountconvo.php').then(function(datos){
+
+				$scope.dashconvo = datos.data;
+
+				console.log(datos.data);
+			})
+
+		}
+
+		$scope.importardash();
+	});
+
+	datos.controller('countdep',function($scope,$http){
+
+		$scope.importardash = function(){
+
+			$http.get('../modelo/datos/listarcountdep.php').then(function(datos){
+
+				$scope.dashdep = datos.data;
+
+				console.log(datos.data);
+			})
+
+		}
+
+		$scope.importardash();
+	});
