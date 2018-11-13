@@ -34,11 +34,23 @@ $(document).ready(function(){
                 
                  $('#content-wrapper1').fadeOut(200) && $('#content-wrapper3').fadeOut(200) && $('#content-wrapper4').fadeOut(200) && $('#content-wrapper2').fadeIn(500);
             })
+            $('#noticiasdash').click(function() {
+                
+                 $('#content-wrapper1').fadeOut(200) && $('#content-wrapper3').fadeOut(200) && $('#content-wrapper4').fadeOut(200) && $('#content-wrapper2').fadeIn(500);
+            })
             $('#eventos').click(function() {
                 
                  $('#content-wrapper1').fadeOut(200) && $('#content-wrapper2').fadeOut(200)&& $('#content-wrapper4').fadeOut(200) && $('#content-wrapper3').fadeIn(500);
             })
+            $('#eventosdash').click(function() {
+                
+                 $('#content-wrapper1').fadeOut(200) && $('#content-wrapper2').fadeOut(200)&& $('#content-wrapper4').fadeOut(200) && $('#content-wrapper3').fadeIn(500);
+            })
             $('#convocatorias').click(function() {
+                
+                 $('#content-wrapper1').fadeOut(200) && $('#content-wrapper2').fadeOut(200) && $('#content-wrapper3').fadeOut(200) && $('#content-wrapper4').fadeIn(500) ;
+            })
+            $('#convocatoriasdash').click(function() {
                 
                  $('#content-wrapper1').fadeOut(200) && $('#content-wrapper2').fadeOut(200) && $('#content-wrapper3').fadeOut(200) && $('#content-wrapper4').fadeIn(500) ;
             })

@@ -14,13 +14,29 @@ var datos = angular.module('dashunidaddeportiva',[]);
 
 		$scope.importarnoti();
 
-		$scope.selectnoti = function(noti){
+		$scope.selectnoti = function(not){
 
-			console.log(noti);
+			console.log(not);
 
-			$scope.clicknoti = noti;
+			$scope.clicknoti = not;
 		}
 	});
+
+	datos.directive("formatDate", function() {
+    return {
+        require: 'ngModel',
+        link: function(scope, elem, attr, modelCtrl) {
+            modelCtrl.$formatters.push(function(modelValue) {
+                if (modelValue){
+                    return new Date(modelValue);
+                }
+                else {
+                    return null;
+                }
+            });
+        }
+    };
+});
 
 	datos.directive("fileInput", function($parse){
 	return{
@@ -50,8 +66,14 @@ var datos = angular.module('dashunidaddeportiva',[]);
 				transformRequest: angular.identity,
 				headers: {'Content-Type': undefined,'Process-Data': false}
 			}).then(function(response){
-				alert("Subida exitosa! ");
+				alert(response.data);
+				console.log(response.status,response.data);
 				$scope.show_images();
+				},
+				function(response){
+				alert("Archivo no Valido! ");
+				console.error('Error',response.status,response.data);
+
 				});
 			}
 			$scope.show_images = function(){

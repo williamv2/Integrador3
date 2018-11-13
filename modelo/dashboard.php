@@ -182,7 +182,7 @@
                     </div>
                     <div class="mr-5">26 Nuevas Noticias!</div>
                   </div>
-                  <a class="card-footer text-white clearfix small z-1" href="#">
+                  <a class="card-footer text-white clearfix small z-1" href="#" id="noticiasdash">
                     <span class="float-left">Ver Detalles</span>
                     <span class="float-right">
                       <i class="fas fa-angle-right"></i>
@@ -198,7 +198,7 @@
                     </div>
                     <div class="mr-5">11 Nuevos Eventos!</div>
                   </div>
-                  <a class="card-footer text-white clearfix small z-1" href="#">
+                  <a class="card-footer text-white clearfix small z-1" href="#" id="eventosdash">
                     <span class="float-left">Ver Detalles</span>
                     <span class="float-right">
                       <i class="fas fa-angle-right"></i>
@@ -214,7 +214,7 @@
                     </div>
                     <div class="mr-5">10 Nuevas Convocatorias!</div>
                   </div>
-                  <a class="card-footer text-white clearfix small z-1" href="#">
+                  <a class="card-footer text-white clearfix small z-1" href="#" id="convocatoriasdash">
                     <span class="float-left">Ver Detalles</span>
                     <span class="float-right">
                       <i class="fas fa-angle-right"></i>
@@ -892,10 +892,79 @@
                         <td>{{not.fecha}}</td>
                         <td>{{not.lugar}}</td>
                         <td>{{not.idadm}}</td>
-                        <td></td>
+                        <td><button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#ModnotiModal" ng-click="selectnoti(not)">
+                        <i class="fa fa-cog" aria-hidden="true"></i>
+                      </button></td>
+                      <td><button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#DelnotiModal" ng-click="selectnoti(not)"><i class="fa fa-trash-o" aria-hidden="true"></i>
+                      </button></td>
                       </tr>
                     </tbody>
                   </table>
+
+                  <!-- ModNoti Modal-->
+                  <div class="modal fade" id="ModnotiModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Actualizar Noticia</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <form method="POST" action="./modnoti.php">
+                            <div class="form-group">
+                              <input type="text" name="mid_noti" id="mid_noti" style="display: none;" class="form-control" ng-model="clicknoti.idnoticia">
+
+                              ID: <input type="text" name="noid_noti" id="noid_noti"class="form-control" ng-model="clicknoti.idnoticia" disabled="true">
+                              <br>
+                              Título: <input type="text" name="mnom_noti" id="mnom_noti" class="form-control" placeholder="Título" required="true" autofocus="autofocus" ng-model="clicknoti.nombre">
+                              <br>
+                              Descripción:
+                              <textarea class="form-control" placeholder="Descripción" rows="4" name="mdesc_noti" id="mdesc_noti" required="true" autofocus="autofocus" ng-model="clicknoti.descripcion"></textarea>
+                              <br>
+                              Fecha: <input type="date" name="mfech_noti" id="mfech_noti" class="form-control" required="true" autofocus="autofocus" ng-model="clicknoti.fecha" format-date>
+                              <br>
+                              Lugar: <input type="text" name="mlugar_noti" id="mlugar_noti" class="form-control" placeholder="Lugar" required="true" autofocus="autofocus" ng-model="clicknoti.lugar">
+                              <br>
+                              <input type="text" name="madm_noti" id="madm_noti" style="display: none;" value="<?php echo $id ?>">
+                            </div>
+                            <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          <button type="submit" class="btn btn-success">Actualizar</button>
+                        </div>
+                          </form>
+                        </div>
+                        
+                        </div>
+                      </div>
+                  </div>
+
+                  <!-- DelNoti Modal-->
+                  <div class="modal fade" id="DelnotiModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">¿Desea eliminar noticia?</h5>
+                          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                          </button>
+                        </div>
+                          <div class="modal-body">
+                        <form method="POST" action="./delnoti.php">
+                            <strong style="color: red;">
+                              Vas a eliminar la noticia de  "{{clicknoti.nombre}}".
+                            </strong>
+                            <input type="text" id="del_idnot" name="del_idnot" class="form-control" ng-model="clicknoti.idnoticia" style="display:none;">
+                          </div>
+                        <div class="modal-footer">
+                          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+                          <button class="btn btn-danger" type="submit">Aceptar</button>
+                        </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="card-footer small text-muted">Updated <?php echo $hoy['weekday']; ?></div>
@@ -903,6 +972,10 @@
 
           </div>
           <!-- /.container-fluid -->
+
+
+
+          
 
           <!-- Sticky Footer -->
           <footer class="sticky-footer">
@@ -2143,7 +2216,7 @@
 
     <!-- AgreeNoti Modal-->
     <div class="modal fade" id="AgreenotiModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <form>
+      <form class="form-group" method="POST" action="./regnoti.php">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
@@ -2172,12 +2245,14 @@
             <div style="clear:both"></div>
             <hr>
             <span class="col-md-3" ng-repeat="image in uploaded_images">
-            <input type="radio" name="img_noti" id="img_noti" value="../vista/img/upload/{{image.file_name}}">
+            <input type="radio" name="img_noti" id="img_noti" value="{{image.file_name}}" required="true">
             <img ng-src="../vista/img/upload/{{image.file_name}}" width="100" height="80" class="show_images" /></span>
             
             <?php echo "<script> console.log(".$id.");</script>" ?>
             
             </div>
+            <input type="text" name="adm_noti" style="display: none;" id="adm_noti" value="<?php echo $id ?>">
+            
             </div>
             
             <div class="modal-footer">
