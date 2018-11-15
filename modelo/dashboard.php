@@ -59,7 +59,7 @@
 
     <nav class="navbar navbar-expand navbar-dark bg-dark static-top" style="background-color: #D90A1D !important">
 
-      <a class="navbar-brand mr-1" href="#">Dashboard - Unidad Deportes</a>
+      <a class="navbar-brand mr-1" href="#">Administración - Unidad de Deportes</a>
 
       <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
         <i class="fas fa-bars"></i>
@@ -124,7 +124,7 @@
         <li class="nav-item active">
           <a class="nav-link" href="#" id="dashboard">
             <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Dashboard</span>
+            <span>Inicio</span>
           </a>
         </li>
         <li class="nav-item">
@@ -167,9 +167,9 @@
             <!-- Breadcrumbs-->
             <ol class="breadcrumb">
               <li class="breadcrumb-item">
-                <a href="#">Dashboard</a>
+                <a href="#">Inicio</a>
               </li>
-              <li class="breadcrumb-item active">Inicio</li>
+              <li class="breadcrumb-item active">Informe</li>
             </ol>
 
             <!-- Icon Cards-->
@@ -277,7 +277,7 @@
             <!-- Breadcrumbs-->
             <ol class="breadcrumb">
               <li class="breadcrumb-item">
-                <a href="#">Dashboard</a>
+                <a href="#">Inicio</a>
               </li>
               <li class="breadcrumb-item active">Noticias</li>
             </ol>
@@ -433,7 +433,7 @@
             <!-- Breadcrumbs-->
             <ol class="breadcrumb">
               <li class="breadcrumb-item">
-                <a href="#">Dashboard</a>
+                <a href="#">Inicio</a>
               </li>
               <li class="breadcrumb-item active">Eventos</li>
             </ol>
@@ -675,7 +675,7 @@
             <!-- Breadcrumbs-->
             <ol class="breadcrumb">
               <li class="breadcrumb-item">
-                <a href="#">Dashboard</a>
+                <a href="#">Inicio</a>
               </li>
               <li class="breadcrumb-item active">Convocatorias</li>
             </ol>
