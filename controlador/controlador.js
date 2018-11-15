@@ -4,7 +4,7 @@ var datos = angular.module('dashunidaddeportiva',[]);
 
 		$scope.importarnoti = function(){
 
-			$http.get('../modelo/datosnoticias.php').then(function(datos){
+			$http.get('../modelo/datos/datosnoticias.php').then(function(datos){
 
 				$scope.noticias = datos.data;
 
@@ -22,13 +22,36 @@ var datos = angular.module('dashunidaddeportiva',[]);
 		}
 	});
 
+	datos.controller('controladorevent',function($scope,$http){
+
+		$scope.importarevent = function(){
+
+			$http.get('../modelo/datos/datosevent.php').then(function(datos){
+
+				$scope.eventos = datos.data;
+
+				console.log(datos);
+			})
+		}
+
+		$scope.importarevent();
+
+		$scope.selectevent = function(event){
+
+			console.log(event);
+
+			$scope.clickevent = event;
+		}
+	});
+
 	datos.directive("formatDate", function() {
     return {
         require: 'ngModel',
         link: function(scope, elem, attr, modelCtrl) {
             modelCtrl.$formatters.push(function(modelValue) {
                 if (modelValue){
-                    return new Date(modelValue);
+                	var date = new Date(modelValue.replace(/-/g, '\/'));
+                    return new Date(date);
                 }
                 else {
                     return null;
