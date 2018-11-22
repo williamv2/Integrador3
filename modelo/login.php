@@ -53,7 +53,7 @@
              <div class="col-md-12">
                 <!-- Logo -->
                 <div class="logo">
-                   <h1><a href="../vista/unidaddeportes.html"><span class="fa fa-free-code-camp" aria-hidden="true"></span> Unidad de Deportes UFPS - Cúcuta</a></h1>
+                   <h1><a href="../vista/index.html"><span class="fa fa-free-code-camp" aria-hidden="true"></span> Unidad de Deportes UFPS - Cúcuta</a></h1>
                 </div>
              </div>
           </div>

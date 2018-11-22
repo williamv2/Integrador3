@@ -2,12 +2,12 @@
 
 	include('conexion.php');
 
-	$idnoti = $_POST['del_idnot'];
+	$idconvo = $_POST['del_idconvo'];
 
 	$con = new conexion;
 
 		
-		$delete = "DELETE FROM noticia WHERE idnoticia = '$idnoti'";
+		$delete = "DELETE FROM convocatoria WHERE idconvocatoria = '$idconvo'";
 
 		$resultado = $con->consulta($delete);
 
@@ -20,7 +20,7 @@
 		}
 		else {
 			
-			echo '<script>alert("Noticia eliminada exitosamente")</script>';
+			echo '<script>alert("Convocatoria eliminada exitosamente")</script>';
 			echo "<script>window.location='./dashboard.php';</script>";
 		}
 

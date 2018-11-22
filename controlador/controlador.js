@@ -44,6 +44,45 @@ var datos = angular.module('dashunidaddeportiva',[]);
 		}
 	});
 
+	datos.controller('controladorconvo',function($scope,$http){
+
+		$scope.importarconvo = function(){
+
+			$http.get('../modelo/datos/datosconvo.php').then(function(datos){
+
+				$scope.convo = datos.data;
+
+				console.log(datos);
+			})
+		}
+
+		$scope.importarconvo();
+
+		$scope.selectconvo = function(convo){
+
+			console.log(convo);
+
+			$scope.clickconvo = convo;
+		}
+	});
+	
+	datos.controller('controladorselectconvo',function($scope,$http){
+
+		$scope.importarselectconvo = function(){
+
+			$http.get('../modelo/datos/datosarea.php').then(function(datos){
+
+				$scope.area = datos.data;
+
+				console.log(datos);
+			})
+		}
+
+		$scope.importarselectconvo();
+
+	});
+
+
 	datos.directive("formatDate", function() {
     return {
         require: 'ngModel',
