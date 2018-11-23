@@ -249,7 +249,8 @@
               <div class="card-body">
                 <canvas id="myAreaChart" width="100%" height="20"></canvas>
               </div>
-              <div class="card-footer small text-muted">Updated <?php echo $hoy['weekday']; ?></div>
+              <div class="card-footer small text-muted">Actualización <?php setlocale(LC_ALL,"es_ES");
+              echo strftime("%A %d de %B del %Y"); ?></div>
             </div>
 
             
@@ -404,7 +405,8 @@
                   </div>
                 </div>
               </div>
-              <div class="card-footer small text-muted">Updated <?php echo $hoy['weekday']; ?></div>
+              <div class="card-footer small text-muted">Actualización <?php setlocale(LC_ALL,"es_ES");
+              echo strftime("%A %d de %B del %Y"); ?></div>
             </div>
           </div>
           <!-- /.container-fluid -->
@@ -514,7 +516,7 @@
               <div class="card-body">
                 <canvas id="myAreaChart" width="100%" height="30"></canvas>
               </div>
-              <div class="card-footer small text-muted">Updated <?php echo $hoy['weekday']; ?></div>
+              <div class="card-footer small text-muted">Actualización <?php echo $hoy['weekday']; ?></div>
             </div>-->
 
              <!-- DataTables Example -->
@@ -647,7 +649,8 @@
                   </div>
                 </div>
               </div>
-              <div class="card-footer small text-muted">Updated <?php echo $hoy['weekday']; ?>
+              <div class="card-footer small text-muted">Actualización <?php setlocale(LC_ALL,"es_ES");
+              echo strftime("%A %d de %B del %Y"); ?>
               </div>
             </div>
             
@@ -817,12 +820,13 @@
                   </div>
                 </div>
               </div>
-              <div class="card-footer small text-muted">Updated <?php echo $hoy['weekday']; ?></div>
+              <div class="card-footer small text-muted">Actualización <?php setlocale(LC_ALL,"es_ES");
+              echo strftime("%A %d de %B del %Y"); ?></div>
             </div>
 
           </div>
           <!-- /.container-fluid -->
-
+          
           <!-- Sticky Footer 
           <footer class="sticky-footer">
             <div class="container my-auto">
