@@ -25,7 +25,7 @@ $resultado = $con->consulta($query);
 	}
 	else{
 
-		echo '<script>alert("Noticia registrada exitosamente")</script>';
+		
 		echo "<script>window.location='./dashboard.php';</script>";
 		
 	}

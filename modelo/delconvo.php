@@ -20,7 +20,7 @@
 		}
 		else {
 			
-			echo '<script>alert("Convocatoria eliminada exitosamente")</script>';
+			
 			echo "<script>window.location='./dashboard.php';</script>";
 		}
 

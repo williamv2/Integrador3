@@ -29,7 +29,7 @@ $resultado = $con->consulta($query);
 	}
 	else{
 
-		echo '<script>alert("Evento modificado exitosamente")</script>';
+		
 		echo "<script>window.location='./dashboard.php';</script>";
 		
 	}

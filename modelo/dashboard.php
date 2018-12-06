@@ -108,7 +108,7 @@
             <i class="fas fa-user-circle fa-fw"></i>
           </a>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-            <a class="dropdown-item" href="#"><?php echo $user ?></a>
+            <a class="dropdown-item" href="#"><i class="fa fa-user-circle" aria-hidden="true"></i><?php echo $user ?></a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal"><i class="fa fa-sign-out" aria-hidden="true"></i>Cerrar Sesión</a>
           </div>
@@ -180,7 +180,7 @@
                     <div class="card-body-icon">
                       <i class="fa fa-newspaper-o"></i>
                     </div>
-                    <div class="mr-5" ng-repeat="da in dashnoti">{{da.nnot}} Nuevas Noticias!
+                    <div class="mr-5" ng-repeat="da in dashnoti"><strong style="font-size: 150%">{{da.nnot}}</strong> Nuevas Noticias!
                     </div>
                   </div>
                   <a class="card-footer text-white clearfix small z-1" href="#" id="noticiasdash">
@@ -197,7 +197,7 @@
                     <div class="card-body-icon">
                       <i class="fa fa-calendar"></i>
                     </div>
-                    <div class="mr-5" ng-repeat="da in dashevent">{{da.nevent}} Nuevos Eventos!</div>
+                    <div class="mr-5" ng-repeat="da in dashevent"><strong style="font-size: 150%">{{da.nevent}}</strong> Nuevos Eventos!</div>
                   </div>
                   <a class="card-footer text-white clearfix small z-1" href="#" id="eventosdash">
                     <span class="float-left">Ver Detalles</span>
@@ -213,7 +213,7 @@
                     <div class="card-body-icon">
                       <i class="fa fa-bullhorn"></i>
                     </div>
-                    <div class="mr-5" ng-repeat="da in dashconvo">{{da.nconvo}} Nuevas Convocatorias!</div>
+                    <div class="mr-5" ng-repeat="da in dashconvo"><strong style="font-size: 150%">{{da.nconvo}}</strong> Nuevas Convocatorias!</div>
                   </div>
                   <a class="card-footer text-white clearfix small z-1" href="#" id="convocatoriasdash">
                     <span class="float-left">Ver Detalles</span>
@@ -229,7 +229,7 @@
                     <div class="card-body-icon">
                       <i class="fa fa-trophy"></i>
                     </div>
-                    <div class="mr-5" ng-repeat="da in dashdep">{{da.ndep}} Deportes!</div>
+                    <div class="mr-5" ng-repeat="da in dashdep"><strong style="font-size: 150%">{{da.ndep}}</strong> Deportes!</div>
                   </div>
                   <a class="card-footer text-white clearfix small z-1" href="#">
                     <span class="float-left">Ver Detalles</span>
@@ -244,10 +244,14 @@
             <!-- Area Chart Example -->
             <div class="card mb-3">
               <div class="card-header">
-                <i class="fas fa-chart-area"></i>
-                Area Chart Example</div>
-              <div class="card-body">
-                <canvas id="myAreaChart" width="100%" height="20"></canvas>
+                <i class="fa fa-picture-o"></i>
+                Galería
+                <button type="button" class="btn btn-default btn-md float-right" data-toggle="modal" data-target="#Agreegalimg"><span class="fa fa-cloud-upload"></span> Agregar</button>
+              </div>
+              <div class="card-body" ng-controller="uploadgalery" ng-init="show_galery()" style="overflow-y: auto; height:250px; ">
+                <span class="col-md-3" ng-repeat="foto in fotos">
+                <img ng-src="../vista/img/galery/{{foto.file_name}}" class="show_galery" width="200" height="180"/> </span>
+
               </div>
               <div class="card-footer small text-muted">Actualización <?php setlocale(LC_ALL,"es_ES");
               echo strftime("%A %d de %B del %Y"); ?></div>
@@ -293,7 +297,7 @@
                 <button type="button" class="btn btn-default btn-md float-right" data-toggle="modal" data-target="#AgreenotiModal"><span class="fa fa-plus"></span> Agregar</button>
               </div>
 
-              <div class="card-body">
+              <div class="card-body" style="overflow-y: auto; height:400px;">
 
                 <div class="table-responsive" ng-controller="controladornoti">
                   <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -326,7 +330,7 @@
                         <td>{{not.descripcion}}</td>
                         <td>{{not.fecha}}</td>
                         <td>{{not.lugar}}</td>
-                        <td>{{not.idadm}}</td>
+                        <td>{{not.usuario}}</td>
                         <td><button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#ModnotiModal" ng-click="selectnoti(not)">
                         <i class="fa fa-cog" aria-hidden="true"></i>
                       </button></td>
@@ -527,7 +531,7 @@
                 <button type="button" class="btn btn-default btn-md float-right" data-toggle="modal" data-target="#AgreeeventModal"><span class="fa fa-plus"></span> Agregar</button>
               </div>
 
-              <div class="card-body">
+              <div class="card-body" style="overflow-y: auto; height:400px;">
 
                 <div class="table-responsive" ng-controller="controladorevent">
                   <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -566,7 +570,7 @@
                         <td>{{event.fechafin}}</td>
                         <td>{{event.hora}}</td>
                         <td>{{event.lugar}}</td>
-                        <td>{{event.idadm}}</td>
+                        <td>{{event.usuario}}</td>
                         <td><button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#ModeventModal" ng-click="selectevent(event)">
                         <i class="fa fa-cog" aria-hidden="true"></i>
                       </button></td>
@@ -692,7 +696,7 @@
                 <button type="button" class="btn btn-default btn-md float-right" data-toggle="modal" data-target="#AgreeconvoModal"><span class="fa fa-plus"></span> Agregar</button>
               </div>
 
-              <div class="card-body">
+              <div class="card-body" style="overflow-y: auto; height:400px;">
 
                 <div class="table-responsive" ng-controller="controladorconvo">
                   <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -734,7 +738,7 @@
                         <td>{{con.hora}}</td>
                         <td>{{con.lugar}}</td>
                         <td>{{con.area}}</td>
-                        <td>{{con.idadm}}</td>
+                        <td>{{con.usuario}}</td>
                         <td><button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#ModconvoModal" ng-click="selectconvo(con)">
                         <i class="fa fa-cog" aria-hidden="true"></i>
                       </button></td>
@@ -1027,6 +1031,53 @@
       </form>
     </div>
 
+    <!-- Agreegalimg Modal-->
+    <div class="modal fade" id="Agreegalimg" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Subir Imagenes</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="file-field" ng-controller="uploadgalery" ng-init="show_galery()">
+                <div class="btn btn-primary btn-sm float-left">
+                    <span>Seleccione Archivos:</span>
+                    <input type="file" file-input="files" multiple>
+                </div>
+                <br><br>
+                <button class="btn btn-info" ng-click="uploadImage()"><i class="fa fa-upload" aria-hidden="true"></i> Subir</button>
+                <button class="btn btn-danger" type="button" data-dismiss="modal"><i class="fa fa-reply" aria-hidden="true"></i> Salir</button>
+            </div>
+            
+
+            <!--<div class="custom-file" ng-controller="uploadgalery">
+              <input type="file" class="custom-file-input" file-input="files" id="customFile" multiple>
+              <label class="custom-file-label" for="customFile"></label>
+              
+            </div>-->
+            </form>
+            
+            
+            <div style="clear:both"></div>
+                
+          </div>
+          <!--<div class="modal-footer">
+            <form method="POST" action="./delconvo.php">
+            <input type="text" id="del_idconvo" name="del_idconvo" class="form-control" ng-model="clickconvo.idconvocatoria" style="display:none;">
+            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+            <button class="btn btn-danger" type="submit">Aceptar</button>
+            </form>
+          </div>-->
+            
+        </div>
+      </div>
+    </div>
+
+
     <!-- Bootstrap core JavaScript-->
     
     <script src="../vista/bootstrap/dashboard/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -1043,8 +1094,8 @@
     <script src="../vista/bootstrap/dashboard/js/sb-admin.min.js"></script>
 
     <!-- Demo scripts for this page-->
-    <!--<script src="../vista/bootstrap/dashboard/js/demo/datatables-demo.js"></script>-->
-    <script src="../vista/bootstrap/dashboard/js/demo/chart-area-demo.js"></script>
+    <!--<script src="../vista/bootstrap/dashboard/js/demo/datatables-demo.js"></script>
+    <script src="../vista/bootstrap/dashboard/js/demo/chart-area-demo.js"></script>-->
 
   </body>
 

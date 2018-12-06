@@ -147,6 +147,54 @@ var datos = angular.module('dashunidaddeportiva',[]);
 			}
 			});
 
+	datos.controller("uploadgalery", function($scope, $http){
+			
+			$scope.uploadImage = function(){
+				var form_data = new FormData();
+				angular.forEach($scope.files, function(file){
+				console.log(file);
+				form_data.append('file[]', file);
+				});
+			$http.post('upload_galery.php', form_data,
+			{
+				transformRequest: angular.identity,
+				headers: {'Content-Type': undefined,'Process-Data': false}
+			}).then(function(response){
+				//alert(response.data);
+				self.location.reload();
+				console.log(response.status,response.data);
+				$scope.show_galery();
+				},
+				function(response){
+				alert("Archivo no Valido! ");
+				console.error('Error',response.status,response.data);
+
+				});
+			}
+			$scope.show_galery = function(){
+				$http.get("../modelo/datos/mostrarfotos.php")
+				.then(function(data){
+				$scope.fotos = data.data;
+				console.log(data);
+				});
+			}
+		});
+
+	datos.controller('show_galery', function($scope,$http){
+
+		$scope.show_galery = function(){
+
+			$http.get('../modelo/datos/mostrarfotos.php').then(function(datos){
+
+				$scope.fotos = datos.data;
+
+				console.log(datos.data);
+			})
+		}
+		$scope.show_galery();
+	});
+
+
 	datos.controller('countnoticia',function($scope,$http){
 
 		$scope.importardash = function(){

@@ -20,7 +20,7 @@
 		}
 		else {
 			
-			echo '<script>alert("Noticia eliminada exitosamente")</script>';
+			
 			echo "<script>window.location='./dashboard.php';</script>";
 		}
 

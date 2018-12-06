@@ -4,7 +4,7 @@
 <!--[if IE 9]>
 <html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!-->
-<html lang="es"> <!--<![endif]-->
+<html lang="es" ng-app="vistaunidaddeportiva"> <!--<![endif]-->
 <head>
 
     <title>Unidad Deportiva UFPS - Cúcuta</title>
@@ -60,6 +60,8 @@
     <link type="text/css" rel="stylesheet" href="https://ww2.ufps.edu.co/assets/css/custom.css">
     <link type="text/css" rel="stylesheet" href="https://ww2.ufps.edu.co/assets/css/pgwslider/pgwslider.min.css">
         <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script src="../../controlador/angular-1.7.5/angular.min.js"></script>
+        <script src="../../controlador/controladorvista.js"></script>
 
 </head>
 
@@ -516,7 +518,7 @@
     <ul class="breadcrumb no-padding margin-bottom-10">
                           <li title="Ingresar a Inicio"><a href="https://ww2.ufps.edu.co/" style="font-style: italic; font-size: 14px;">Inicio</a></li>
                                      <li title="Unidad de Deportes"><a href="../index.html" style="font-style: italic; font-size: 14px;">Unidad Deportes</a></li>
-                                      <li class="active" title="Deportes en Conjunto"  style="font-style: italic; font-size: 14px;">Deportes en Conjunto</li>
+                                      <li class="active" title="Deportes en Conjunto"  style="font-style: italic; font-size: 14px;">Convocatorias</li>
                          
     </ul> 
 <!--=== fin breadcrumb ===-->
@@ -532,7 +534,7 @@
             <div class="row">
                 <div class="col-md-10">
                                         <h1 class="pull-left" style="font-size: 36px;">
-                        <b>Deportes en Conjunto</b></h1>
+                        <b>Convocatorias</b></h1>
                 </div>
                 <div class="col-md-2">
 
@@ -549,7 +551,7 @@
             <div class="shadow-wrapper">        
 
                 <div class="margin-top-20"><h2 style="color:#AA1916;"><b>Menú de Información</b></h2></div>
-                    <ul class="nav nav-pills nav-stacked list-group sidebar-nav-v1" id="sidebar-nav">
+                    <ul class="nav nav-pills nav-stacked list-group sidebar-nav-v1" id="sidebar-nav" ng-controller="controladorconvo">
                         <!--<li class="list-group-item list-toggle" style="border:none; border-bottom: 1px solid #DDDEDF;">
                     <a data-toggle="collapse" data-parent="#sidebar-nav" href="#collapse-1129" class="collapsed text-menu" aria-expanded="false"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> Acreditación de Alta Calidad</a>                                  
                     <ul id="collapse-1129" class="collapse" aria-expanded="false" >  
@@ -558,11 +560,7 @@
                             <li style="border:none;"><a href="/universidad/acreditacion/1136" class="text-submenu" style="border:none; border-bottom: 1px solid #DDDEDF;"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Por qué es importante acreditarse?</a></li>
                     </ul>-->
                     </li>
-                        <li class="list-group-item" style="border:none; border-bottom: 1px solid #DDDEDF;"><a href="" class="text-menu"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> Baloncesto</a></li>
-                        <li class="list-group-item" style="border:none; border-bottom: 1px solid #DDDEDF;"><a href="" class="text-menu"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> Futbol</a></li>
-                        <li class="list-group-item" style="border:none; border-bottom: 1px solid #DDDEDF;"><a href="" class="text-menu"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> Futbol Sala</a></li>
-                        <li class="list-group-item" style="border:none; border-bottom: 1px solid #DDDEDF;"><a href="" class="text-menu"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> Rugby</a></li>
-                        <li class="list-group-item" style="border:none; border-bottom: 1px solid #DDDEDF;"><a href="" class="text-menu"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> Voleibol</a></li>
+                        <li class="list-group-item" style="border:none; border-bottom: 1px solid #DDDEDF;" ng-repeat="con in convo"><a href="" class="text-menu"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> {{con.nombre}}</a></li>
                         </ul>
                 </li>
                
@@ -572,27 +570,41 @@
 
             </div>
         </div><!--/col-md-3-->
-        <div class="col-md-8 mb-margin-bottom-30">
+        <div class="col-md-8 mb-margin-bottom-30" ng-controller="controladorconvo">
                             <small class="pull-right" style="color:#aa1916;"><i
                         class="fa fa-calendar"></i>                     martes                    ,
                     14                    agosto                    2018</small>
                         <div class="margin-bottom-40">
                                   
-                                    <div class="headline margin-bottom-30"><h1>Deportes en Conjunto</h1></div>
+                                    <div class="headline margin-bottom-30"><h1>Convocatorias</h1></div>
 
                     
                     <h5><p>&nbsp;</p>
 
-<p>Se entiende por deportes de conjunto, a los que se desarrollan con equipos de 2 ó más personas.</p>
+                <div class="col-md-8 mb-margin-bottom-30" ng-repeat="con in convo">
+                    <h3>{{con.nombre}}</h3>
+                    <hr>
+                    <p>{{con.descripcion}}</p>
+                    <br>
+                    <p><strong>Fecha inicio: {{con.fechainicio}}</strong>
+                        <br>
+                        <strong>Fecha Final: {{con.fechafin}}</strong>
+                        <br>
+                        <strong>Hora: {{con.hora}}</strong>
+                        <br>
+                        <strong>Lugar: {{con.lugar}}</strong>
+                        <br>
+                        <strong>Deporte: {{con.area}}</strong>
+                    </p>
+                    <hr>
+                </div>
 
-<p>Estos deportes tienen planes de entrenamiento similares en su contenido, medios y duración (4–5 meses). Son disciplinas de esfuerzos variables, en ellos predomina la información visual. La riqueza de pensamiento del pensamiento táctico en estas disciplinas es de gran significancia.</p>
+        <p></p>
 
-<p></p>
-
-<p></p>
-</h5>
-        </div>
-    </div>
+        <p></p>
+        </h5>
+                </div>
+            </div>
 </div>
     
 

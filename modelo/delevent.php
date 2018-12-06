@@ -20,7 +20,7 @@
 		}
 		else {
 			
-			echo '<script>alert("Evento eliminado exitosamente")</script>';
+			
 			echo "<script>window.location='./dashboard.php';</script>";
 		}
 

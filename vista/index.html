@@ -59,6 +59,7 @@
     <link type="text/css" rel="stylesheet" href="https://ww2.ufps.edu.co/assets/plugins/hover-effects/css/custom-hover-effects.min.css">
     <link type="text/css" rel="stylesheet" href="https://ww2.ufps.edu.co/assets/css/custom.css">
     <link type="text/css" rel="stylesheet" href="https://ww2.ufps.edu.co/assets/css/pgwslider/pgwslider.min.css">
+    <link rel="stylesheet" type="text/css" href="">
         <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
         <script src="../controlador/angular-1.7.5/angular.min.js"></script>
         <script src="../controlador/controladorvista.js"></script>
@@ -568,12 +569,12 @@
                     <h5><b>Peticiones, Denuncias, Quejas, Reclamos y Sugerencias</b></h5></a>
             </div>-->
             <div class="item text-center" style="padding-top: 5px;">
-                <a href="/seccion/calendario">
+                <a href="./deportes/calendario.html">
                     <span class="sprite i-calendario hover-shadow"></span>
                     <h5><b>Calendario de Eventos</b></h5></a>
             </div>
             <div class="item text-center" style="padding-top: 5px;">
-                <a href="/universidad/convocatorias"><span class="sprite i-convocatoria hover-shadow"></span>
+                <a href="./deportes/convocatorias.html"><span class="sprite i-convocatoria hover-shadow"></span>
                     <h5><b>Convocatorias</b></h5></a>
             </div>
             <div class="item text-center" style="padding-top: 5px;">
@@ -603,186 +604,33 @@
 
 <!-- EVENTOS ---------------------->
 <div style="background-color: #e8e8e8; ">
-    <div class="container content-prin profile">
+    <div class="container content-prin profile" ng-controller="controladorgaleria">
         <div class="row margin-top-10">
             <div class="headline-center-v2 headline-center-v2-dark margin-bottom-10">
-                <h1 style="font-size: 30px;"><b>Eventos</b></h1>
+                <h1 style="font-size: 30px;"><b>Galería</b></h1>
                 <span class="bordered-icon"><i class="fa fa-calendar-o" aria-hidden="true"></i></span>
             </div>
             <div class="col-md-12">
                 <div class="row equal-height-columns margin-bottom-10">
 
                     <div class="container">
-                        <div class="owl-carousel-v1 owl-work-v1 margin-bottom-40">
-                            <div class="owl-recent-works-v1">
-<!--                                <div class="item">-->
-<!--                                    <a href="#">-->
-<!--                                        <em class="overflow-hidden">-->
-<!--                                            <img class="img-responsive" src="assets/img/main/img1.jpg" alt="">-->
-<!--                                        </em>-->
-<!--                        <span>-->
-<!--                            <strong>Happy New Year</strong>-->
-<!--                            <i>Anim pariatur cliche reprehenderit</i>-->
-<!--                        </span>-->
-<!--                                    </a>-->
-<!--                                </div>-->
 
-                                                                                                                                                                                                                                                                                                                                <div class="item">
-                                                                                    <a href="/ueventos/pruebaektoctubre"  style="text-align: center;">
-                                                                                        <div class="easy-block-v1-badge rgba-red" style="color:#fff; padding: 5px;">
-                                                    Del 16 al 20 de octubre                                                </div>
-                                            <em class="overflow-hidden">
-                                                <img class="img-responsive" src="https://ww2.ufps.edu.co/public/imagenes/eventos/0a9daff689580e8ccc0f006a03d4c90f.jpg" alt="Imagen de eventos">
-                                            </em>
-                        <span>
-                            <strong>Inscripciones Prueba EKT - Octubre</strong>
-                            <i>Lugar: UFPS</i>
-                        </span>
-                                        </a>
-                                    </div>
-                                                                                                                                                                                                                                                                                                <div class="item">
-                                                                                    <a href="/ueventos/simulacro_nacional"  style="text-align: center;">
-                                                                                        <div class="easy-block-v1-badge rgba-blue" style="color:#fff; padding: 5px;">
-                                                    24 de octubre                                                </div>
-                                            <em class="overflow-hidden">
-                                                <img class="img-responsive" src="https://ww2.ufps.edu.co/public/imagenes/eventos/fcb86688040ec8ae2f7c2b34a1c7cab5.jpg" alt="Imagen de eventos">
-                                            </em>
-                        <span>
-                            <strong>Simulacro Nacional 2018</strong>
-                            <i>Lugar: UFPS</i>
-                        </span>
-                                        </a>
-                                    </div>
-                                                                                                                                                                                                                                                                                                <div class="item">
-                                                                                    <a href="https://www.youtube.com/watch?v=vYEqG-iua4o&t=2s" style="text-align: center;">
-                                                                                        <div class="easy-block-v1-badge rgba-purple" style="color:#fff; padding: 5px;">
-                                                    Hasta el 31 de octubre                                                </div>
-                                            <em class="overflow-hidden">
-                                                <img class="img-responsive" src="https://ww2.ufps.edu.co/public/imagenes/eventos/b7879d444a008dbbc1d6797e394f45fc.jpg" alt="Imagen de eventos">
-                                            </em>
-                        <span>
-                            <strong>Instructivo para Inscripción Virtual UFPS</strong>
-                            <i>Lugar: UFPS</i>
-                        </span>
-                                        </a>
-                                    </div>
-                                                                                                                                                                                                                                                                                                <div class="item">
-                                                                                    <a href="/ueventos/resultados_ori_i2019"  style="text-align: center;">
-                                                                                        <div class="easy-block-v1-badge rgba-default" style="color:#fff; padding: 5px;">
-                                                    ver información                                                </div>
-                                            <em class="overflow-hidden">
-                                                <img class="img-responsive" src="https://ww2.ufps.edu.co/public/imagenes/eventos/5282da608085ad3e8a24f54a5dcda827.jpg" alt="Imagen de eventos">
-                                            </em>
-                        <span>
-                            <strong>Resultados Convocatoria Movilidad ORI - I Semestre 2019</strong>
-                            <i>Lugar: UFPS</i>
-                        </span>
-                                        </a>
-                                    </div>
-                                                                                                                                                                                                                                                                                                <div class="item">
-                                                                                    <a href="/ueventos/iii_procesos_industriales"  style="text-align: center;">
-                                                                                        <div class="easy-block-v1-badge rgba-red" style="color:#fff; padding: 5px;">
-                                                    17, 18 y 19 de octubre                                                </div>
-                                            <em class="overflow-hidden">
-                                                <img class="img-responsive" src="https://ww2.ufps.edu.co/public/imagenes/eventos/eec22f1dbe2576343471c5699e8fcda5.jpg" alt="Imagen de eventos">
-                                            </em>
-                        <span>
-                            <strong>III Semana de Tecnología en Procesos Industriales</strong>
-                            <i>Lugar: Aud. Eustorgio Colmenares Baptista</i>
-                        </span>
-                                        </a>
-                                    </div>
-                                                                                                                                                                                                                                                                                                <div class="item">
-                                                                                    <a href="/ueventos/v_semana_industrial"  style="text-align: center;">
-                                                                                        <div class="easy-block-v1-badge rgba-blue" style="color:#fff; padding: 5px;">
-                                                    17, 18 y 19 de octubre                                                </div>
-                                            <em class="overflow-hidden">
-                                                <img class="img-responsive" src="https://ww2.ufps.edu.co/public/imagenes/eventos/2b6c186a9f015f8e3022c7ab1b572e82.jpg" alt="Imagen de eventos">
-                                            </em>
-                        <span>
-                            <strong>V Semana de Ingeniería Industrial</strong>
-                            <i>Lugar: Aud. Eustorgio Colmenares Baptista</i>
-                        </span>
-                                        </a>
-                                    </div>
-                                                                                                                                                                                                                                                                                                <div class="item">
-                                                                                    <a href="https://seincienciatecnologia.ufpso.edu.co/" style="text-align: center;">
-                                                                                        <div class="easy-block-v1-badge rgba-purple" style="color:#fff; padding: 5px;">
-                                                    Del 20 al 23 de noviembre                                                </div>
-                                            <em class="overflow-hidden">
-                                                <img class="img-responsive" src="https://ww2.ufps.edu.co/public/imagenes/eventos/0fc6d22b77e17361d33566b6eb7ee16f.jpg" alt="Imagen de eventos">
-                                            </em>
-                        <span>
-                            <strong>V Semana Internacional de Ciencia, Tecnología e Innovación</strong>
-                            <i>Lugar: UFPS</i>
-                        </span>
-                                        </a>
-                                    </div>
-                                                                                                                                                                                                                                                                                                <div class="item">
-                                                                                    <a href="/ueventos/feria_bioetecnolo_2018"  style="text-align: center;">
-                                                                                        <div class="easy-block-v1-badge rgba-default" style="color:#fff; padding: 5px;">
-                                                    31 de octubre                                                </div>
-                                            <em class="overflow-hidden">
-                                                <img class="img-responsive" src="https://ww2.ufps.edu.co/public/imagenes/eventos/10c15c54c60d4723820e82dd11d523c1.jpg" alt="Imagen de eventos">
-                                            </em>
-                        <span>
-                            <strong>I Feria Biotecnológica UFPS 2018 "Ciencia y Cultura"</strong>
-                            <i>Lugar: Plazoleta Empresarial</i>
-                        </span>
-                                        </a>
-                                    </div>
-                                                                                                                                                                                                                                                                                                <div class="item">
-                                                                                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScrAGWEpIcV6Tt688v1xxGKlZPmuYIDGzye34H9bCUQP0DTgQ/viewform" style="text-align: center;">
-                                                                                        <div class="easy-block-v1-badge rgba-red" style="color:#fff; padding: 5px;">
-                                                    Hasta el 16 de octubre                                                </div>
-                                            <em class="overflow-hidden">
-                                                <img class="img-responsive" src="https://ww2.ufps.edu.co/public/imagenes/eventos/811325cd581d70332099ff1f5bdee60a.jpg" alt="Imagen de eventos">
-                                            </em>
-                        <span>
-                            <strong>Inscripciones</strong>
-                            <i>Lugar: Ver información</i>
-                        </span>
-                                        </a>
-                                    </div>
-                                                                                                                                                                                                                                                                                                <div class="item">
-                                                                                    <a href="https://inscripciones.ufps.edu.co/" style="text-align: center;">
-                                                                                        <div class="easy-block-v1-badge rgba-blue" style="color:#fff; padding: 5px;">
-                                                    Hasta el 31 de octubre                                                </div>
-                                            <em class="overflow-hidden">
-                                                <img class="img-responsive" src="https://ww2.ufps.edu.co/public/imagenes/eventos/64c83730ef96cbaac8128eb5d5a2df0e.jpg" alt="Imagen de eventos">
-                                            </em>
-                        <span>
-                            <strong>Venta de PIN I semestre 2019</strong>
-                            <i>Lugar: UFPS</i>
-                        </span>
-                                        </a>
-                                    </div>
-                                                                                                                                                                                                                                                                                                <div class="item">
-                                                                                    <a href="/ueventos/-facturacionelectronica-"  style="text-align: center;">
-                                                                                        <div class="easy-block-v1-badge rgba-purple" style="color:#fff; padding: 5px;">
-                                                    25 de octubre de 2018                                                </div>
-                                            <em class="overflow-hidden">
-                                                <img class="img-responsive" src="https://ww2.ufps.edu.co/public/imagenes/eventos/6ce633bf3f37f77b4ead5135bc8fc7eb.jpg" alt="Imagen de eventos">
-                                            </em>
-                        <span>
-                            <strong>Entrada libre</strong>
-                            <i>Lugar: Aud. Biblioteca Eduardo Cote Lamus</i>
-                        </span>
-                                        </a>
-                                    </div>
-                                                                                                                                                                                                                                                                                                <div class="item">
-                                                                                    <a href="/ueventos/prog_amigo_acade"  style="text-align: center;">
-                                                                                        <div class="easy-block-v1-badge rgba-default" style="color:#fff; padding: 5px;">
-                                                    ver información                                                </div>
-                                            <em class="overflow-hidden">
-                                                <img class="img-responsive" src="https://ww2.ufps.edu.co/public/imagenes/eventos/352edf572dc248c54c0304d6c983ce3b.jpg" alt="Imagen de eventos">
-                                            </em>
-                        <span>
-                            <strong>Programa Amigo Académico</strong>
-                            <i>Lugar: UFPS</i>
-                        </span>
-                                        </a>
-                                    </div>
+                        <ul class="row block-grid-v2">
+                          <li class="col-md-2 col-sm-3 col-xs-6 md-margin-bottom-30" style="padding-left: 14px;" ng-repeat="foto in fotos">
+                            <div class="easy-block-v1">
+                              <a href="./img/galery/{{foto.file_name}}">
+                              <img src="./img/galery/{{foto.file_name}}" width="200" height="180" alt="">
+                              </a>
+                            </div>
+                            <div class="block-grid-v2-info rounded-bottom  bloques_eventos">
+                              <h5>
+                              <b><a href="">{{foto.uploaded_on}}</a></b>
+                              </h5>
+                            </div>
+                          </li>
+                          
+                        </ul>
+
                                 
 
 
@@ -813,32 +661,36 @@
 
 <!-- NOVEDADES -->
 <div style="background-color: #b43432;">
-    <div class="container content-prin profile">
+    <div class="container content-prin profile" ng-controller="controladornoticia">
 
         <div class="row margin-bottom-10 margin-top-10">
             <div class="headline-center-v2 margin-bottom-10">
                 <h1 style="font-size: 30px; color:#fff;"><b>Novedades</b></h1>
                 <span class="bordered-icon"><i class="fa fa-files-o" aria-hidden="true"></i></span>
             </div>
-                <div class="col-sm-4">
+            <div class="row margin-bottom-10 margin-top-10" >
+                <div class="col-sm-4" ng-repeat ="noti in noticias">
                     <div class="service-block-v1 md-margin-bottom-50"
                          style="background: #fff; border-top: 5px solid #f1c40f;">
-                                                    <i class="icon-custom icon-lg rounded-x icon-color-yellow icon-line fa fa-link"
-                               style="background: #fff;"></i>
-                               
-                               <img class="img-rounded img-thumbnail" src="img/imagen15.jpg">                                                               
-                                <h5 class="title-v3-bg text-uppercase"><a
-                                href="https://ww2.ufps.edu.co/unoticia/-juegos-regionales-universitarios-?fbclid=IwAR2EU7tXm1GYtlnyllgaUdZtqgAXEgpMtpAUKH64of0BB3vCbIA9CbWvAFs"
-                                style="text-transform:none; color:#464646;"><b>Destacada participación de los deportistas UFPS en los XXVII Juegos Regionales Universitarios Ascun 2018. </b></a>
+                       <i class="icon-custom icon-lg rounded-x icon-color-yellow icon-line fa fa-link"
+                       style="background: #fff;"></i>
+                       
+                       <img class="img-rounded img-thumbnail" src="./img/upload/{{noti.file_image}}">                                                               
+                        <h5 class="title-v3-bg text-uppercase"><a
+                        href="#"
+                        style="text-transform:none; color:#464646;"><b>{{noti.nombre}}</b></a>
                         </h5>
                         <p>
-                            viernes                            ,
-                            7                            Septiembre                            2018                        </p>
-                        <a href="https://ww2.ufps.edu.co/unoticia/-juegos-regionales-universitarios-?fbclid=IwAR2EU7tXm1GYtlnyllgaUdZtqgAXEgpMtpAUKH64of0BB3vCbIA9CbWvAFs"><b>Leer
+                            {{noti.descripcion}}
+                        </p>
+                        <p>
+                            {{noti.fecha}}
+                        </p>
+                        <a href="#"><b>Leer
                                 más</b></a>
                     </div>
                 </div>
-                                                                                        <div class="col-sm-4">
+                <!--<div class="col-sm-4">
                     <div class="service-block-v1 md-margin-bottom-50"
                          style="background: #fff; border-top: 5px solid #3498db;">
                                                     <i class="icon-custom icon-lg rounded-x icon-color-blue icon-line fa fa-link"
@@ -855,7 +707,7 @@
                                 más</b></a>
                     </div>
                 </div>
-                                                                                        <div class="col-sm-4">
+                <div class="col-sm-4">
                     <div class="service-block-v1 md-margin-bottom-50"
                          style="background: #fff; border-top: 5px solid #e74c3c;">
                                                     <i class="icon-custom icon-lg rounded-x icon-color-red icon-line fa fa-link"
@@ -871,8 +723,9 @@
                         <a href="#"><b>Leer
                                 más</b></a>
                     </div>
-                </div>
-                        <div class="col-md-12 margin-top-10">
+                </div>-->
+            </div>
+                <div class="col-md-12 margin-top-10">
                 <a href="#"
                    class="btn-u btn-brd btn-brd-hover btn-u-light btn-u-sm pull-right tooltips"
                    data-toggle="tooltip" data-placement="left" data-original-title="Más Novedades Anteriores">Ver

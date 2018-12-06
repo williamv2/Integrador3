@@ -4,7 +4,7 @@ include("../conexion.php");
 
 	$datos = array();
 
-$consulta = "SELECT * FROM noticia n";
+$consulta = "SELECT n.idnoticia, n.nombre, n.descripcion, n.fecha, n.lugar, n.idadm, a.usuario, n.file_image FROM noticia n INNER JOIN administrador a ON a.idcodigoadm=n.idadm";
 
 $con = new conexion;
 
