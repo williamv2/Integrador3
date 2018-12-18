@@ -79,30 +79,6 @@
 
       <!-- Navbar -->
       <ul class="navbar-nav ml-auto ml-md-0">
-        <!--<li class="nav-item dropdown no-arrow mx-1">
-          <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="fas fa-bell fa-fw"></i>
-            <span class="badge badge-danger">9+</span>
-          </a>
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="alertsDropdown">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>
-        </li>
-        <li class="nav-item dropdown no-arrow mx-1">
-          <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="fas fa-envelope fa-fw"></i>
-            <span class="badge badge-danger">7</span>
-          </a>
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="messagesDropdown">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>
-        </li>-->
         <li class="nav-item dropdown no-arrow">
           <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="fas fa-user-circle fa-fw"></i>
@@ -132,22 +108,6 @@
             <i class="fa fa-newspaper-o"></i>
             <span>Noticias</span></a>
         </li>
-        <!--<li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="fas fa-fw fa-folder"></i>
-            <span>Pages</span>
-          </a>
-          <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-            <h6 class="dropdown-header">Login Screens:</h6>
-            <a class="dropdown-item" href="login.html">Login</a>
-            <a class="dropdown-item" href="register.html">Register</a>
-            <a class="dropdown-item" href="forgot-password.html">Forgot Password</a>
-            <div class="dropdown-divider"></div>
-            <h6 class="dropdown-header">Other Pages:</h6>
-            <a class="dropdown-item" href="404.html">404 Page</a>
-            <a class="dropdown-item" href="blank.html">Blank Page</a>
-          </div>
-        </li>-->
         <li class="nav-item">
           <a class="nav-link" href="#" id="eventos">
             <i class="fa fa-calendar-o"></i>
@@ -444,84 +404,6 @@
               <li class="breadcrumb-item active">Eventos</li>
             </ol>
 
-            <!-- Icon Cards
-            <div class="row">
-              <div class="col-xl-3 col-sm-6 mb-3">
-                <div class="card text-white bg-primary o-hidden h-100">
-                  <div class="card-body">
-                    <div class="card-body-icon">
-                      <i class="fa fa-newspaper-o"></i>
-                    </div>
-                    <div class="mr-5">26 Nuevas Noticias!</div>
-                  </div>
-                  <a class="card-footer text-white clearfix small z-1" href="#">
-                    <span class="float-left">Ver Detalles</span>
-                    <span class="float-right">
-                      <i class="fas fa-angle-right"></i>
-                    </span>
-                  </a>
-                </div>
-              </div>
-              <div class="col-xl-3 col-sm-6 mb-3">
-                <div class="card text-white bg-warning o-hidden h-100">
-                  <div class="card-body">
-                    <div class="card-body-icon">
-                      <i class="fa fa-calendar"></i>
-                    </div>
-                    <div class="mr-5">11 Nuevos Eventos!</div>
-                  </div>
-                  <a class="card-footer text-white clearfix small z-1" href="#">
-                    <span class="float-left">Ver Detalles</span>
-                    <span class="float-right">
-                      <i class="fas fa-angle-right"></i>
-                    </span>
-                  </a>
-                </div>
-              </div>
-              <div class="col-xl-3 col-sm-6 mb-3">
-                <div class="card text-white bg-success o-hidden h-100">
-                  <div class="card-body">
-                    <div class="card-body-icon">
-                      <i class="fa fa-bullhorn"></i>
-                    </div>
-                    <div class="mr-5">10 Nuevas Convocatorias!</div>
-                  </div>
-                  <a class="card-footer text-white clearfix small z-1" href="#">
-                    <span class="float-left">Ver Detalles</span>
-                    <span class="float-right">
-                      <i class="fas fa-angle-right"></i>
-                    </span>
-                  </a>
-                </div>
-              </div>
-              <div class="col-xl-3 col-sm-6 mb-3">
-                <div class="card text-white bg-danger o-hidden h-100">
-                  <div class="card-body">
-                    <div class="card-body-icon">
-                      <i class="fa fa-trophy"></i>
-                    </div>
-                    <div class="mr-5">11 Deportes!</div>
-                  </div>
-                  <a class="card-footer text-white clearfix small z-1" href="#">
-                    <span class="float-left">Ver Detalles</span>
-                    <span class="float-right">
-                      <i class="fas fa-angle-right"></i>
-                    </span>
-                  </a>
-                </div>
-              </div>
-            </div>-->
-
-            <!-- Area Chart Example
-            <div class="card mb-3">
-              <div class="card-header">
-                <i class="fas fa-chart-area"></i>
-                Area Chart Example</div>
-              <div class="card-body">
-                <canvas id="myAreaChart" width="100%" height="30"></canvas>
-              </div>
-              <div class="card-footer small text-muted">Actualización <?php echo $hoy['weekday']; ?></div>
-            </div>-->
 
              <!-- DataTables Example -->
             <div class="card mb-3">

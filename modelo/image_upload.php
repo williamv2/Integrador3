@@ -2,8 +2,6 @@
 	include_once("conexion.php");
 
 	$con = new conexion;
-
-	/*echo "<script> console.log(".var_dump($_FILES['file']['type'][0]).");</script>";*/
 	
 	foreach($_FILES['file']['name'] as $key=>$val){
 	if($_FILES['file']['type'][0] === "image/jpeg" || $_FILES['file']['type'][0] === "image/jpg" || $_FILES['file']['type'][0] === "image/png"){	
